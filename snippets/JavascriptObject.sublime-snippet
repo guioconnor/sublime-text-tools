@@ -1,0 +1,71 @@
+<snippet>
+	<content><![CDATA[
+var ${1:NAMESPACE} = ${1:NAMESPACE} || {};
+
+(function(\$){
+    "use strict";
+
+    var instance;
+
+    var _clickHandler = function _clickHandler (e) {
+        // 'this' refers to the submodule itself in this context
+        var target = \$(e.target);
+    
+        if(target){
+        }
+    };
+    
+    var _changeHandler = function _changeHandler (e) {
+        // 'this' refers to the submodule itself in this context
+        var target = \$(e.target);
+    
+        if(target){
+        }
+    };
+    
+    var _submitHandler = function _submitHandler (e) {
+        // 'this' refers to the submodule itself in this context
+        var target = \$(e.target);
+    
+        if(target){
+        }
+    };
+    
+    // Grid Controller class
+    ${1:NAMESPACE}.${2:CLASSNAME} = function( conf ) {
+        var that = this;
+
+        if(!conf) {
+            throw new Error("${2:CLASSNAME}: no conf object given");
+        }
+        else if(!conf.body) {
+            throw new Error("YourClass: no body prameter on conf object");
+        }
+
+
+        // Singleton
+        if(instance) {
+            return instance;
+        }
+        else {
+            instance = this;
+        }
+
+        conf.body
+            .on("click",  function(e) { _clickHandler.call(that, e); })
+            .on("submit",  function(e) { _clickHandler.call(that, e); })
+            .on("change",  function(e) { _clickHandler.call(that, e); });
+
+        ${3}
+
+    };
+
+
+})(jQuery);
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>class</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

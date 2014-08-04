@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+var _${1:event}Handler = function _${1:event}Handler (e) {
+    // 'this' refers to the submodule itself in this context
+    var target = \$(e.target);
+
+    if(target){
+    }
+};
+
+${2:element}.on("${1:event}",  function(e) { _clickHandler.call(that, e); })
+]]></content>
+	<tabTrigger>handler</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
