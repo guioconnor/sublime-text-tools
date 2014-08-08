@@ -39,7 +39,7 @@ var ${1:NAMESPACE} = ${1:NAMESPACE} || {};
             throw new Error("${2:CLASSNAME}: no conf object given");
         }
         else if(!conf.body) {
-            throw new Error("YourClass: no body prameter on conf object");
+            throw new Error("${2:CLASSNAME}: no body prameter on conf object");
         }
 
 
