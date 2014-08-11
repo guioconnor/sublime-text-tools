@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+var ${1:ClassName} = React.createClass({
+    render: function() {
+        return (
+			${2://Code here}
+        );
+    }
+});
+]]></content>
+	<tabTrigger>reactclass</tabTrigger>
+</snippet>
