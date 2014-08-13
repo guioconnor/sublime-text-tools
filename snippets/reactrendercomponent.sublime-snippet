@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+React.renderComponent(
+    <${1:ComponentName} ${2:data={some.data}} />,
+    ${4:document.getElementById('${3:#containerElement}')}
+);
+]]></content>
+	<tabTrigger>reactrendercomponent</tabTrigger>
+</snippet>
