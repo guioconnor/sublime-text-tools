@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+/** @jsx React.DOM */
+]]></content>
+	<tabTrigger>jsxpragma</tabTrigger>
+</snippet>
