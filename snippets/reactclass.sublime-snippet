@@ -1,31 +1,83 @@
 <snippet>
     <content><![CDATA[
 var ${1:ClassName} = React.createClass({
-${3:    propTypes: function() {
-        ${2:// Prop validation here}
+    // Validation
+    
+    propTypes: function() {
+        // Prop validation here
     \},
 
-}${7:    getDefaultProps: function() {
+
+    // Mounting
+
+    componentWillMount: function() {
+        // is invoked immediately before mounting occurs.
+    \},
+
+    componentDidMount: function() {
+        // is invoked immediately after mounting occurs. Initialization that requires DOM nodes should go here.
+    \}
+
+    componentWillReceiveProps: function(nextProps){
+        // is invoked when a mounted component receives new props. This method should be used to compare this.props
+        // and nextProps to perform state transitions using this.setState().
+    },
+
+
+    // Updating
+
+    shouldComponentUpdate: function() {
+        //is invoked when a component decides whether any changes warrant an update to the DOM.
+        // Implement this as an optimization to compare this.props with nextProps and this.state
+        // with nextState and return false if React should skip updating.
+
+        //return [true|false]
+    },
+
+    componentWillUpdate: function(nextProps, nextState) {
+        // is invoked immediately before updating occurs. You cannot call this.setState() here.
+    },
+
+    componentDidUpdate: function(prevProps, prevState) {
+        // is invoked immediately after updating occurs.
+    },
+
+
+    // Unmounting
+    componentWillUnmount: function() {
+        // is invoked immediately before a component is unmounted and destroyed. Cleanup should go here.
+    },
+
+
+    // Initialisation
+
+    getDefaultProps: function() {
         return {
-            ${4:value}: ${5:'${6:default value}'}
+            value: :'default value'
         \};
     \},
 
-}${11:    getInitialState: function(e) {
+    getInitialState: function(e) {
         return{
-            ${8:value}: ${9:'${10:intial}'}
+            value: 'intial'
         \};
     \},
 
-}${15:    handleEvent: function(e) {
+
+    // Custom methods
+
+    handleEvent: function(e) {
         this.setState({
-            ${12:value}: ${13:'${14:recalculated}'}
+            value: 'recalculated'
         \});
     \},
-}
+
+
+    // Render
+
     render: function() {
         return (
-            ${16://Code here}
+            ${2://Code here}
         );
     }
 });
