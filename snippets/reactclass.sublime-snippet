@@ -16,12 +16,12 @@ var ${1:ClassName} = React.createClass({
 
     componentDidMount: function() {
         // is invoked immediately after mounting occurs. Initialization that requires DOM nodes should go here.
-    \}
+    \},
 
     componentWillReceiveProps: function(nextProps){
         // is invoked when a mounted component receives new props. This method should be used to compare this.props
         // and nextProps to perform state transitions using this.setState().
-    },
+    \},
 
 
     // Updating
@@ -32,21 +32,21 @@ var ${1:ClassName} = React.createClass({
         // with nextState and return false if React should skip updating.
 
         //return [true|false]
-    },
+    \},
 
     componentWillUpdate: function(nextProps, nextState) {
         // is invoked immediately before updating occurs. You cannot call this.setState() here.
-    },
+    \},
 
     componentDidUpdate: function(prevProps, prevState) {
         // is invoked immediately after updating occurs.
-    },
+    \},
 
 
     // Unmounting
     componentWillUnmount: function() {
         // is invoked immediately before a component is unmounted and destroyed. Cleanup should go here.
-    },
+    \},
 
 
     // Initialisation
