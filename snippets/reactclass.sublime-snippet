@@ -3,7 +3,7 @@
 var ${1:ClassName} = React.createClass({
     // Validation
     
-    propTypes: function() {
+    propTypes: {
         // Prop validation here
     \},
 
@@ -53,7 +53,7 @@ var ${1:ClassName} = React.createClass({
 
     getDefaultProps: function() {
         return {
-            value: :'default value'
+            value: 'default value'
         \};
     \},
 
