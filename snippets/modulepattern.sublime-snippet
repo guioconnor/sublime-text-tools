@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+var ${1:moduleName} = (function() {
+    // your module code goes here
+    ${2:var sum = 0 ;}
+
+    return {
+        ${3:add:function() \{
+            sum = sum + 1;
+            return sum;
+        \},
+        reset:function() \{
+            return sum = 0;    
+        \}}
+    }   
+}());
+]]></content>
+	<tabTrigger>module-pattern</tabTrigger>
+</snippet>
